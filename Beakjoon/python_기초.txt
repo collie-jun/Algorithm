@@ -1,0 +1,34 @@
+#형 변환
+int() => 정수로
+float() => 실수로
+str() => 문자로
+
+#산술 연산자
+% => 나머지 예시 print(5%2) 실행결과 1
+// => 몫 예시 print(5//2) 실행결과 2
+/ => 나누기 예시 print(5/2) 실행결과 2.5
+** => 거듭 제곱 예시 print(5**2) 실행결과 25
+
+#비교 연산자
+> 크다 예시 print(5>2) 실행결과 True
+== 같다
+!= 같지 않다
+
+#논리 연산자
+and 둘다 참이면 True
+or 둘 중 하나라도 참이면 True
+not 반전 예시 print(not3<5) 실행결과 false
+
+#멤버 확인자
+in 포함 예시 print('c' in 'cat') 실행결과 True
+not in  미포함 예시 print('c' not in 'cat') 실행결과 false
+
+#불리안
+bool() 불리안으로
+값이 있으면 True
+값이 없으면 false
+
+a=1
+b=2
+c=0
+c 는 값이 없음 => false
