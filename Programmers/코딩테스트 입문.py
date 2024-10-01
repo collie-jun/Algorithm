@@ -125,3 +125,42 @@ def solution(price):
 #아이스 아메리카노
 def solution(money):
     return [(money // 5500), (money % 5500)]
+
+#개미 군단
+def solution(hp):
+    big = hp // 5
+    mid = (hp % 5) // 3
+    small = ((hp % 5) % 3)
+    return big + mid + small
+
+#숨어있는 숫자의 덧셈
+def solution(my_string):
+    return sum (int(char) for char in my_string if char.isdigit())
+#isdigit 각 문자가 숫자인지 확인 char.isidigit()은 해당 문자가 숫자인지 여부를 확인
+
+#대문자와 소문자
+def solution(my_string):
+     return my_string.swapcase()
+#swapcase 문자열 내의 모든 대문자를 소문자로, 소문자를 대문잘 변환
+
+#가장 큰 수 찾기
+def solution(array):
+    max_value = max(array)
+    max_index = array.index(max.value)
+    return [max_value, max_index]
+
+
+#n의 배수 고르기
+def solution(n, numlist):
+    return [ char for char in numlist if char % n ==0  ]
+
+#새균 증식
+def solution(n,t):
+    return n << t
+    # 비프시프트(<<,>>)
+    # 왼쪽 시프트 연산자(<<):2를 곱한 것과 같은 효과 => n << m : n * 2의 m승
+    # 오른쪽 시프트 연산자(>>):2로 나눈 것과 같은 효과 => n >> m : n/2의 m승
+
+#문자열 뒤집기
+def solution(my_string):
+    return reverse(my_string)
