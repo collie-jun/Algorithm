@@ -163,4 +163,162 @@ def solution(n,t):
 
 #문자열 뒤집기
 def solution(my_string):
-    return reverse(my_string)
+    return ''.join(reversed(my_string))
+    #join() 문자열 메서드, 각 요소를 하나의 문자열로 합칠 때 사용
+    #''은 구분자 빈 문자열을 사용하면 요소들 사이에 아무것도 넣지 않고 합침
+
+#문자열 뒤집기
+def solution(my_string):
+    return my_string[::-1]
+    #슬라이싱 [start:stop:step] 을 명시하여 부분을 추출
+    #mylist[:] 전체 출력
+    #[start:]는 시작 index 부터 끝까지 추출
+    #[:end]는 처음부터 end 전까지 추출
+    #[start:stop:step] step는 몇 칸씩 던너 뛰는지 설정
+    #mylist[::2] 2칸씩 건너뛰기
+    #mylist[::-1] 역순 출력
+
+#짝수 홀수 개수
+def solution(num_list):
+    odd_num, even_num = 0,0
+    for num in num_list:
+        if num % 2 == 0:
+            even_num += 1
+        else:
+            odd_num += 1
+    return [even_num, odd_num]
+
+
+#특정 문자 제거하기
+def solution(my_string, letter):
+    return my_string.replace(letter,'')
+    #문자열.replace(바꿀 문자열, 새로운 문자열)
+
+#가위 바위 보
+def solution(rsp):
+   return rsp.translate(str.maketrans('025', '502'))
+
+def solution(rsp):
+    d = {'0':'5','2':'0','5':'2'}
+    return ''.join(d[i] for i in rsp)
+
+#직각삼각형 출력하기
+n = int(input())
+for i in range (1,n+1):
+    print("*"*i, end= "\n")
+
+#점의 위치 구하기
+def solution(dot):
+    quad = [(3,2),(4,1)]
+    return quad[dot[0]>0][dot[1]>0]
+    #python에서 불리언 값을 숫자처럼 사용 가능 true =1 , false = 0으로 사용 가능
+    #리스트 quad 좌표가 어느 사분면에 있는지를 나타냄, 각 항목은 사분면의 번호
+    #튜플은 여러 개의 값을 하나로 묶을 수 있는 자료형, 리스트와 비슷하지만 튜플은 변경할 수 없는 자료형
+
+#피자 나눠 먹기
+def solution(slice,n):
+    if n % slice == 0:
+        return n // slice
+    else : 
+        return n // slice +1
+    
+#주사위의 개수
+def solution(box,n):
+    return int((box[0]//n)*(box[1]//n)*(box[2]//n))
+
+#약수 구하기
+def solution(n):
+    answer = []
+    for i in range (1,n+1):
+        if n % i == 0:
+            answer.append(i)
+        return answer
+    #append() 함수는 리스트의 메서드로, 리스트의 끝에 새로운 요소를 추가할 때 사용
+    
+def solution(n):
+    return[i for i in range(1,n+1)if n%i ==0 ]
+
+#인덱스 바꾸기
+def solution(my_string, num1, num2):
+    s = list(my_string)
+    s[num1],s[num2] = s[num2],s[num1]
+    return ''.join(s)
+
+
+#최댓값 만들기
+def solution(numbers):
+    numbers.sort(reverse = True)
+    return max(numbers[0] * numbers[1], numbers[-1] * numbers[-2])
+    #list.sort(reverse=False) / list.sort(reverse=True)
+    #오름차순 / 내림차순
+
+
+#순서쌍의 개수
+def solution(n):
+    a = 0
+    for i in range (1, n+1):
+        if n % i == 0:
+            a += 1
+    return a
+
+#편지
+def solution(message):
+   return 2 * len(message) 
+
+#양꼬치
+def solution(n,k):
+    a = n // 10
+    return (n*12000)+((k-a)*2000)
+
+#배열 뒤집기
+def solution(num_list):
+    return num_list[::-1]
+
+#배열의 유사도
+def solution(s1, s2):
+    return len(set(s1)&set(s2))
+    #set()함수 => 리스트나 문자열을 집합으로 변환
+    #&교집합을 구하는 방식
+
+#자릿수 더하기
+def solution(n):
+    return sum([int(i) for i in str(n)])
+
+#최댓값 만들기
+def solution(numbers):
+    numbers.sort(reverse=True)
+    return numbers[0]*numbers[1]
+
+#삼각형의 완성 조건
+def solution(sides):
+    sides.sort(reverse=True)
+    if sides[0] < sides[1] + sides[2]:
+        return 1
+    else:
+        return 2
+    
+
+#문자열 안에 문자열
+def solution(str1, str2):
+    if str2 in str1:
+        return 1
+    else:
+        return 2
+    
+# 배열 원소의 길이
+def solution(strlist):
+    return [len(i) for i in strlist]
+    #따로 공백으로 구별해주지 않아도 되는 문제
+
+#제곱수 판별하기 
+def solution(n):
+    return 1 if (n ** 0.5)% 1 ==0 else 2
+    #n**0.5는 n의 제곱근을 구하는 연산
+
+#모음 제거
+def solution(my_string):
+    return ''.join([i for i in my_string if not (i in 'aeiou')])
+
+#문자 반복 출력하기
+def solution(my_string, n):
+     return list(map(lambda n: n * 2, my_string))
