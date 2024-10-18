@@ -321,4 +321,58 @@ def solution(my_string):
 
 #문자 반복 출력하기
 def solution(my_string, n):
-     return list(map(lambda n: n * 2, my_string))
+     return ''.join(map(lambda x: x * n, my_string))
+
+#배열 회전시키기
+def solution(numbers, direction):
+    return [numbers[-1]] + numbers[:-1] if direction == 'right' else numbers[1:] + [numbers[0]]
+
+#369게임
+def solution(order):
+    return sum(1 for i in str(order) if i in '369')
+
+#숫자 찾기
+def solution(num, k):
+    answer = str(num).find(str(k))
+    if(answer >= 0):
+        answer += 1
+    return answer
+    #find()함수에서 특정 문자열 또는 부분 문자열이 처음으로 나타나는 위치를 반환
+    #만약 찾는 값이 문자열에 존재하지 않으면 -1을 반환
+
+#문자열 정렬하기
+def solution(my_string):
+    return ''.join(sorted(my_string.lower()))
+    #lower() 소문자로 변환하는 함수
+    #sorted()는 원본 리스트를 유지하면서 정렬된 결과만 사용하고 싶을 때
+    #sort()는 원본 리스트 자체를 정렬하고, 정렬된 결과를 계속해서 사용하려고 할 때
+
+#피자 나눠먹기
+def solution(n):
+    lcm = (6*n)//math.gcd(n,6)
+    return lcm//6
+
+#암호 해독
+def solution(cipher, code):
+    return ''.join(cipher[code-1::code])
+
+#문자열 정렬하기
+def solution(my_string):
+    return sorted(int(i) for i in my_string if i in '0123456789')
+    #문자열을 int 정수로 변경해줘야 하는거 까먹지 말기!
+
+def solution(my_string):
+    return sorted(int(i) for i in my_string if i.isdigit())
+    #i.isdigit() i가 숫자인지 확인
+
+#외계행성의 나이
+def solution(age):
+    return str(age).translate(str.maketrans('0123456789','abcdefghij'))
+    #translate(table)메서드는 문자열에서 지정한 table에 따라 변환
+    #table은 str.maketrans()함수로 생성된 문자 매핑 테이블
+    #str.maketrans(): 두 문자열 x,y를 받아 문자 매핑 테이블을 생성
+
+#합성수 찾기
+def solution(n):
+    
+    return 
